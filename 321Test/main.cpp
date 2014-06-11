@@ -7,12 +7,32 @@
 //
 
 #include <iostream>
+#include "menu_functions.h"
 
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    
+    
+    
+    //MAIN MENU
+    //Functions Used stored in menu_funtions.cpp & .h
+    
+    //Variables
+    int menu_input;
+    
+    //Mainline
+    print_menu();
+    do{
+        
+        menu_input = get_option();
+        menu_action(menu_input);
+        
+    }while(menu_input != 6);
+    
+    
+    
+    
     return 0;
+    
 }
 

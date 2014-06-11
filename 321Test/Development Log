@@ -1,0 +1,64 @@
+321Test v0.1 11/6/14 2:30PM
+========================================
+
+Development Log Created
+
+
+FILE CHANGES
+_________________________________
+
+main .cpp & .h  (NEW) : Program Mainline
+menu_functions .cpp & .h (NEW) : Deals with Menu Information and Flow
+personalityquiz .cpp & .h (NEW) : Deals with Personality Quiz Data
+
+
+
+CODE CHANGES
+_________________________________
+main .cpp & .h  Created
+    -Added Mainline Menu Loop
+
+menu_functions .cpp & .h Created
+    -Added Menu Stubs
+    -Added Function Stubs
+    -Added Quiz
+
+personalityquiz .cpp & .h Created (INCOMPLETE)
+    -Added Questions
+    -Added Quiz Structure
+        * Create Encapsulation Loop that provides Exit Functionality
+        * Create Explanation of Quiz format e.g. on a scale of 1 (lowest) to 5 (highest) how much do you value these things
+        * Create Class to Pass the Score of each letter in the Myers Briggs Test
+          + Create an AddScore Function as Part of that Class to accept
+            a char and int variables (as outlined in comments)
+
+    -Quiz Sourced From quiz_questions.txt (INCOMPLETE)
+        * Add More Q's
+        * Change Q's to suit Audience
+
+
+321Test v0.1.1 11/6/14 7:20PM
+========================================
+
+Development Log Created
+
+
+FILE CHANGES
+_________________________________
+
+personalityquiz .cpp & .h (EDIT) : Deals with Personality Quiz Data
+
+
+
+CODE CHANGES
+_________________________________
+personalityquiz .cpp & .h Created (INCOMPLETE)
+    -Completed Quiz Structure
+    -Quiz Sourced From quiz_questions.txt (NEEDS EDIT)
+        * Add More Q's
+        * Change Q's to suit Audience
+        * Assign Degree Recommendations To Each Profile Type
+        * Randomize Picking of Q's once expanded
+            (Limit to 24q's of equal variance(3 For Each Letter))
+        
+
