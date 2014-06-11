@@ -2,6 +2,7 @@
 ========================================
 
 Development Log Created
+Initial Design Implementations
 
 
 FILE CHANGES
@@ -40,7 +41,7 @@ personalityquiz .cpp & .h Created (INCOMPLETE)
 321Test v0.1.1 11/6/14 7:20PM
 ========================================
 
-Development Log Created
+Personality Quiz Modifications
 
 
 FILE CHANGES
@@ -61,4 +62,54 @@ personalityquiz .cpp & .h Created (INCOMPLETE)
         * Randomize Picking of Q's once expanded
             (Limit to 24q's of equal variance(3 For Each Letter))
         
+
+
+
+
+
+321Test v0.1.2 11/6/14 8:20PM
+========================================
+
+Beginning Of Game Structure
+
+
+FILE CHANGES
+_________________________________
+
+newplayer .cpp & .h  (NEW) : New Player Initialization & Game Setup
+
+
+
+CODE CHANGES
+_________________________________
+newplayers .cpp & .h Created (INCOMPLETE)
+    - Added newplayer class
+        * Will Be Used As An Initialization State For The Game
+    - Added Class Export (UNTESTED)
+        * Needs Overloading Import & Export Functions
+        * Add SQL Support/Change to Database Solution
+    - Added Basic Player Class Structure
+        * Needs More Added Such As Location Data, Date & Time
+        * Indexing For Multiple Save States
+
+
+TO-DO LIST
+_________________________________
+- Global Index Variables for current Player in database/text file etc.
+    e.g. Player[1] will load save state for Player[1]
+- Global Personality Variable (maybe unneded if player class can store)
+- Menu Linking To New & Save Player States
+- Add Debug PLayer Display (showing Current loaded player stats etc)
+- SQL/Database Support to replace text file saves
+- Add And Change Questions in the Personality quiz to suit target audience
+- Add RNG Picker for Questions to select 3 for each letter
+- Assign Degree Recommendations to Profile Result
+- Extend Player Class
+- Modular Testing of Existing Code
+- More Code Commenting
+
+
+
+
+
 
