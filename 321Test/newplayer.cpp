@@ -32,8 +32,9 @@ void newplayer::saveplayer(){
         
         myfile.close();
     }
-    else cout << "Unable to open file";
-    return 0;
+    else {
+        cout << "Unable to open file";
+    }
     
     
 }
