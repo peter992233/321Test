@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D0450FFC19485ACA003C6FE6 /* newplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0450FFA19485ACA003C6FE6 /* newplayer.cpp */; };
+		D0450FFE194868CE003C6FE6 /* personalityquiz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */; };
 		D07B874219480F2F00A87BFB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07B874119480F2F00A87BFB /* main.cpp */; };
 		D07B874419480F2F00A87BFB /* _21Test.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D07B874319480F2F00A87BFB /* _21Test.1 */; };
 		D07B874C19480FDB00A87BFB /* menu_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07B874A19480FDB00A87BFB /* menu_functions.cpp */; };
-		D07B874F194815E000A87BFB /* personalityquiz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07B874D194815E000A87BFB /* personalityquiz.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,13 +31,13 @@
 		D02DFC28194822500000125B /* Development Log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Development Log"; sourceTree = "<group>"; };
 		D0450FFA19485ACA003C6FE6 /* newplayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = newplayer.cpp; sourceTree = "<group>"; };
 		D0450FFB19485ACA003C6FE6 /* newplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newplayer.h; sourceTree = "<group>"; };
+		D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = personalityquiz.cpp; sourceTree = "<group>"; };
+		D0450FFF194868DD003C6FE6 /* personalityquiz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = personalityquiz.h; sourceTree = "<group>"; };
 		D07B873E19480F2F00A87BFB /* 321Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 321Test; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07B874119480F2F00A87BFB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D07B874319480F2F00A87BFB /* _21Test.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = _21Test.1; sourceTree = "<group>"; };
 		D07B874A19480FDB00A87BFB /* menu_functions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = menu_functions.cpp; sourceTree = "<group>"; };
 		D07B874B19480FDB00A87BFB /* menu_functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = menu_functions.h; sourceTree = "<group>"; };
-		D07B874D194815E000A87BFB /* personalityquiz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = personalityquiz.cpp; path = ../personalityquiz.cpp; sourceTree = "<group>"; };
-		D07B874E194815E000A87BFB /* personalityquiz.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = personalityquiz.h; path = ../personalityquiz.h; sourceTree = "<group>"; };
 		D07B8751194816CE00A87BFB /* quiz_questions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quiz_questions.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,8 +71,8 @@
 		D07B874019480F2F00A87BFB /* 321Test */ = {
 			isa = PBXGroup;
 			children = (
-				D07B874D194815E000A87BFB /* personalityquiz.cpp */,
-				D07B874E194815E000A87BFB /* personalityquiz.h */,
+				D0450FFF194868DD003C6FE6 /* personalityquiz.h */,
+				D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */,
 				D07B874119480F2F00A87BFB /* main.cpp */,
 				D07B874319480F2F00A87BFB /* _21Test.1 */,
 				D07B874A19480FDB00A87BFB /* menu_functions.cpp */,
@@ -138,8 +138,8 @@
 			files = (
 				D07B874C19480FDB00A87BFB /* menu_functions.cpp in Sources */,
 				D0450FFC19485ACA003C6FE6 /* newplayer.cpp in Sources */,
+				D0450FFE194868CE003C6FE6 /* personalityquiz.cpp in Sources */,
 				D07B874219480F2F00A87BFB /* main.cpp in Sources */,
-				D07B874F194815E000A87BFB /* personalityquiz.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
