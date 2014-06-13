@@ -93,6 +93,33 @@ newplayers .cpp & .h Created (INCOMPLETE)
         * Indexing For Multiple Save States
 
 
+
+
+
+
+
+321Test v0.1.3 11/6/14 12:06PM
+========================================
+
+Testing of File Methods
+
+
+FILE CHANGES
+_________________________________
+newplayer .cpp & .h  (ARCHIVED) : New Player Initialization & Game Setup
+
+
+CODE CHANGES
+_________________________________
+newplayers .cpp & .h Archived (ARCHIVED)
+    - Restructuring of The Player Classes & Header
+        *Due to learning and testing Serialization and/or SQL implementation for data management
+        *May Be Recycled at a later Date But For Now they are removed to archive
+        
+
+
+
+################################################################################################################################################################
 TO-DO LIST
 _________________________________
 - Global Index Variables for current Player in database/text file etc.
@@ -107,6 +134,18 @@ _________________________________
 - Extend Player Class
 - Modular Testing of Existing Code
 - More Code Commenting
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

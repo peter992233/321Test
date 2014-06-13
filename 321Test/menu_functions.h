@@ -16,7 +16,8 @@ int get_option();
 void menu_action(int);
 void menu_new_game();
 void menu_load_game();
-void menu_delete_game();
+void menu_save_game();
+void menu_show_player();
 void menu_settings();
 void menu_quiz();
 
