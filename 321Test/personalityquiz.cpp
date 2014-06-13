@@ -7,19 +7,18 @@
 //
 
 #include "personalityquiz.h"
+MB_Profile current_prof;
 
 
-
-void start_quiz(){
+string start_quiz(){
+    string result;
     get_p_type();
+    result = current_prof.MB_Result();
+    return result;
 }
 
 void get_p_type()
 {
-    
-    
-    MB_Profile current_prof;
-
     
     
     std::ifstream quizfile;
@@ -142,6 +141,8 @@ string MB_Profile::MB_Result(){
     }else{
         result.insert(3,"X");
     }
+    
+    
     return result;
 }
 

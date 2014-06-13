@@ -98,7 +98,7 @@ newplayers .cpp & .h Created (INCOMPLETE)
 
 
 
-321Test v0.1.3 11/6/14 12:06PM
+321Test v0.1.3 13/6/14 12:06PM
 ========================================
 
 Testing of File Methods
@@ -119,23 +119,54 @@ newplayers .cpp & .h Archived (ARCHIVED)
 
 
 
-################################################################################################################################################################
-TO-DO LIST
+321Test v0.1.4 13/6/14 4:10PM
+========================================
+
+Simple File Storage Method (.txt) Implemented
+
+
+FILE CHANGES
 _________________________________
-- Global Index Variables for current Player in database/text file etc.
-    e.g. Player[1] will load save state for Player[1]
-- Global Personality Variable (maybe unneded if player class can store)
-- Menu Linking To New & Save Player States
-- Add Debug PLayer Display (showing Current loaded player stats etc)
+player_data .cpp & .h  (NEW) : Player Data Store Code
+global_data.txt (NEW) : Contains Global information such as the number of Saves
+savefile.txt (NEW) : Contains Save States of the test class player_data
+
+
+CODE CHANGES
+_________________________________
+player_data .cpp & .h (INCOMPLETE)
+    - Simple Implementation of File Saving and Structure
+        * Need to Implement Loading Files to the Current save
+        * Also Need to Implement File Deletion
+    - Menus Changed to Appropriate Data Display and Responses
+
+
+
+
+
+################################################################################################################################################################
+
+TO-DO LIST
+
+================
+High Priority
+================
+- Loading & Deleting Game States From savefile.txt
+
+================
+Mid Priority
+================
 - SQL/Database Support to replace text file saves
-- Add And Change Questions in the Personality quiz to suit target audience
-- Add RNG Picker for Questions to select 3 for each letter
-- Assign Degree Recommendations to Profile Result
 - Extend Player Class
 - Modular Testing of Existing Code
 - More Code Commenting
 
-
+================
+Low Priority
+================
+- Assign Degree Recommendations to Profile Result
+- Add And Change Questions in the Personality quiz to suit target audience
+- Add RNG Picker for Questions to select 3 for each letter
 
 
 

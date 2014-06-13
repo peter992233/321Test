@@ -15,6 +15,7 @@
 #include <string>
 using namespace std;
 
+
 class MB_Profile{
     
     int score_E;
@@ -35,7 +36,7 @@ class MB_Profile{
 
 
 
-void start_quiz();
+string start_quiz();
 void get_p_type();
 
 #endif /* defined(___21Test__personalityquiz__) */

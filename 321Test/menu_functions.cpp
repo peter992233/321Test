@@ -8,6 +8,9 @@
 
 #include "menu_functions.h"
 #include "personalityquiz.h"
+#include "player_data.h"
+player_data current;
+string MB_Global = "XXXX";
 
 void print_menu(){
     std::cout << "=====MENU=====\n";
@@ -16,7 +19,9 @@ void print_menu(){
     std::cout << "3.) Show Player \n";
     std::cout << "4.) Load Game \n";
     std::cout << "5.) Personality Quiz \n";
-    std::cout << "6.) Exit \n";
+    std::cout << "6.) Return Global MB \n";
+    
+    std::cout << "10.) Exit \n";
     
     
 }
@@ -27,7 +32,7 @@ int get_option(){
     do{
         std::cin >> x;
         std::cout << "You Input " << x << "!\n";
-    }while(x <= 0 || x > 6);
+    }while(x <= 0 || x > 10);
     
     
     return x;
@@ -46,9 +51,12 @@ void menu_action (int input){
         menu_load_game();
         
     }else if (input == 5){
-        start_quiz();
+        MB_Global = start_quiz();
         
     }else if (input == 6){
+        cout << MB_Global << endl;
+    }
+    else if (input == 10){
         std::cout << "\n EXITING PROGRAM \n";
         return;
     }
@@ -59,24 +67,24 @@ void menu_action (int input){
 
 void menu_new_game(){
     std::cout << "\n NEW GAME \n";
-
+    current.set_data(MB_Global);
 
 }
 
 void menu_save_game(){
     std::cout << "\n SAVE GAME \n";
-    
+    current.save_data();
 }
 
 void menu_show_player(){
     std::cout << "\n SHOW CURRENT PLAYER \n";
-    
+    current.display_data();
     
 }
 
 void menu_load_game(){
     std::cout << "\n LOAD PLAYER \n";
-    
+    current.load_data();
     
 }
 

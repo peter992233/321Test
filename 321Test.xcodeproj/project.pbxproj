@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D0450FFC19485ACA003C6FE6 /* newplayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0450FFA19485ACA003C6FE6 /* newplayer.cpp */; };
 		D0450FFE194868CE003C6FE6 /* personalityquiz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */; };
+		D078CE54194AB7270076F8CB /* player_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D078CE52194AB7270076F8CB /* player_data.cpp */; };
 		D07B874219480F2F00A87BFB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07B874119480F2F00A87BFB /* main.cpp */; };
 		D07B874419480F2F00A87BFB /* _21Test.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D07B874319480F2F00A87BFB /* _21Test.1 */; };
 		D07B874C19480FDB00A87BFB /* menu_functions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07B874A19480FDB00A87BFB /* menu_functions.cpp */; };
@@ -29,10 +29,12 @@
 
 /* Begin PBXFileReference section */
 		D02DFC28194822500000125B /* Development Log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Development Log"; sourceTree = "<group>"; };
-		D0450FFA19485ACA003C6FE6 /* newplayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = newplayer.cpp; sourceTree = "<group>"; };
-		D0450FFB19485ACA003C6FE6 /* newplayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newplayer.h; sourceTree = "<group>"; };
 		D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = personalityquiz.cpp; sourceTree = "<group>"; };
 		D0450FFF194868DD003C6FE6 /* personalityquiz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = personalityquiz.h; sourceTree = "<group>"; };
+		D078CE52194AB7270076F8CB /* player_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player_data.cpp; sourceTree = "<group>"; };
+		D078CE53194AB7270076F8CB /* player_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player_data.h; sourceTree = "<group>"; };
+		D078CE55194AB84B0076F8CB /* global_data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = global_data.txt; sourceTree = "<group>"; };
+		D078CE56194AC96A0076F8CB /* savefile.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = savefile.txt; sourceTree = "<group>"; };
 		D07B873E19480F2F00A87BFB /* 321Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 321Test; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07B874119480F2F00A87BFB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		D07B874319480F2F00A87BFB /* _21Test.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = _21Test.1; sourceTree = "<group>"; };
@@ -79,8 +81,10 @@
 				D07B874B19480FDB00A87BFB /* menu_functions.h */,
 				D07B8751194816CE00A87BFB /* quiz_questions.txt */,
 				D02DFC28194822500000125B /* Development Log */,
-				D0450FFA19485ACA003C6FE6 /* newplayer.cpp */,
-				D0450FFB19485ACA003C6FE6 /* newplayer.h */,
+				D078CE52194AB7270076F8CB /* player_data.cpp */,
+				D078CE53194AB7270076F8CB /* player_data.h */,
+				D078CE55194AB84B0076F8CB /* global_data.txt */,
+				D078CE56194AC96A0076F8CB /* savefile.txt */,
 			);
 			path = 321Test;
 			sourceTree = "<group>";
@@ -137,8 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D07B874C19480FDB00A87BFB /* menu_functions.cpp in Sources */,
-				D0450FFC19485ACA003C6FE6 /* newplayer.cpp in Sources */,
 				D0450FFE194868CE003C6FE6 /* personalityquiz.cpp in Sources */,
+				D078CE54194AB7270076F8CB /* player_data.cpp in Sources */,
 				D07B874219480F2F00A87BFB /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -27,7 +27,7 @@ int main(int argc, const char * argv[])
         menu_input = get_option();
         menu_action(menu_input);
         
-    }while(menu_input != 6);
+    }while(menu_input != 10);
     
     
     
