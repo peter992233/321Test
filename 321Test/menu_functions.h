@@ -1,9 +1,9 @@
 //
 //  menu_functions.h
-//  321Test
+//  Peter Brown
 //
-//  Created by csci321ga2a on 11/06/2014.
-//  Copyright (c) 2014 csci321. All rights reserved.
+//  Created by Peter Brown on 11/06/2014.
+//  Copyright (c) 2014 csci321ga2a. All rights reserved.
 //
 
 #ifndef ___21Test__menu_functions__
@@ -12,14 +12,14 @@
 #include <iostream>
 
 
-//Menuy Structure
+//Menu Structure
 void print_menu();
 int get_option();
 void menu_action(int);
 
 
 
-//Menu Options
+//Menu Options - Intuitively Named for convenience
 void menu_new_game();
 void menu_save_game();
 void menu_display_current();

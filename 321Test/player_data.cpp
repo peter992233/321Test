@@ -7,12 +7,19 @@
 //
 
 #include "player_data.h"
+
+
+//The Save files that are locally stored Go here
 vector<string> playerlist;
+
+
+
+
 
 //Initialize function
 player_data::player_data(){
     
-    
+    //STUB
     
 }
 
@@ -24,7 +31,7 @@ player_data::player_data(){
 void player_data::display_current_player_data(){
     /*
      This Module is to output the Current Player Data
-     that is loaded
+     that is loaded into memory
      */
     cout << "\n===========CURRENT PLAYER===========\n";
     cout << "PID: " << p_id << endl;
@@ -41,7 +48,13 @@ void player_data::display_current_player_data(){
 
 
 
+
 void player_data::set_MB(string inMB){
+    
+    /*
+     Sets the Myers-Briggs Personality Type to the current Profile
+     */
+    
     p_MB_result = inMB;
 }
 
@@ -204,20 +217,30 @@ void player_data::load_from_local(){
      This Module Loads a Single Save State to the Current
      Game Save from the playerlist vector
      */
-    int toload = 0;
     
-    bool inputgood = false;
     
-    display_all_local_saves();
     
+    int toload = 0; //The ID of the save state to be loaded
+    
+    bool inputgood = false; //Input is checked for validity
+    
+    
+    display_all_local_saves();//Displays the Existing Saves
+    
+    
+    //Loops until valid input is given
     while(inputgood == false){
         cout << "Enter the Save file You Wish to Load: ";
         cin >> toload;
         
         
+        //If it does not exist in the list
         if (toload < 0 || toload > playerlist.size()){
             cout << "\n\n BAD INPUT NOT IN RANGE \n\n";
         }else{
+            
+            //If it does exist in the list it loads the data using a string stream into the
+            //Currently active player
             inputgood = true;
             
             cout << "Loading Save Number " << toload << endl;
@@ -258,35 +281,49 @@ void player_data::save_to_local(){
      This Module Loads a Single Save State to the Current
      Game Save from the playerlist vector
      */
-    int in_id = 0;
-    char overwrite = '\0';
     
-    string compiledsave;
+    
+    
+    int in_id = 0; //This is the check against the save games to see if there is an existing profile that contains the same save data
+    char overwrite = '\0'; // This is an input option on whether or not to override the previous game
+    
+    string compiledsave; // This is a string variable which holds the newly compiled dave game data
     
     
         cout << "Saving Current Player: ";
-            
+    
+    
+        //loops until the end of the player_list vector size
+    
             for(int i = 0; i < playerlist.size();i++){
+                
+            //Pulls in the ID from the first line of each in the list
             stringstream ss(playerlist[i]);
             ss >> in_id;
+                
+                //If there is an ID match
                 if(in_id == p_id){
                     cout << "Would You Like to Overwrite Previous Save? (y/n)" ;
                     cin >> overwrite;
                     
                     if(overwrite == 'n'){
-                         //Push to the back and change p_id
+                        //If you do not wish to override and want to create a new save game from the data
+                         //compiles the string and pushed it back while changing the p_id
                         stringstream outstring(compiledsave);
                         outstring << (playerlist.size()+1) << ";" << p_name << ";" << p_degree << ";" << p_int << ";" << p_sta << ";"<< p_soc << ";"<< p_energy << ";"<< p_academic << ";"<< p_stress << ";"<< p_MB_result << ";";
                         playerlist.push_back(outstring.str());
                         return;
                     }else if(overwrite == 'y'){
-                        //Overwrite the variable in the same slot
+                        //If you do want to override and replace the save game from the current data
+                        //compiles the string and writes over the existing string
                         stringstream outstring(compiledsave);
                         outstring << p_id << ";" << p_name << ";" << p_degree << ";" << p_int << ";" << p_sta << ";"<< p_soc << ";"<< p_energy << ";"<< p_academic << ";"<< p_stress << ";"<< p_MB_result << ";";
                         playerlist[p_id] = outstring.str();
                         return;
                         
-                    }else{
+                    }
+                    else    //If there is No Matching ID in the list
+                    {
                         cout <<"Bad Input, No Save For You!" << endl;
                         return;
                     }
@@ -294,6 +331,9 @@ void player_data::save_to_local(){
                 }
                     
             }
+    
+        //If no return condition is hit we can assume there is no existing conflict and the save state can simply be added to the back of the list
+        //without conflicting with any existing saves
         stringstream outstring(compiledsave);
         outstring << p_id << ";" << p_name << ";" << p_degree << ";" << p_int << ";" << p_sta << ";"<< p_soc << ";"<< p_energy << ";"<< p_stress << ";"<< p_academic << ";"<< p_MB_result << ";";
         playerlist.push_back(outstring.str());

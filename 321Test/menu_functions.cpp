@@ -1,17 +1,29 @@
 //
 //  menu_functions.cpp
-//  321Test
+//  Peter Brown
 //
-//  Created by csci321ga2a on 11/06/2014.
-//  Copyright (c) 2014 csci321. All rights reserved.
+//  Created by Peter Brown on 11/06/2014.
+//  Copyright (c) 2014 csci321ga2a. All rights reserved.
 //
 
 #include "menu_functions.h"
 #include "personalityquiz.h"
 #include "player_data.h"
+
+
+
+
+//Currently Loaded Player Profile
 player_data current;
+
+
+//The Global Setting for Personality
 string MB_Global = "XXXX";
 
+
+
+
+//Function to Print the Menu
 void print_menu(){
     std::cout << "=====DEBUG MENU=====\n";
     std::cout << "1.) Create New Game \n";
@@ -30,6 +42,8 @@ void print_menu(){
     
 }
 
+
+//Function Waits for Input Before Returning an Input Marker to the Menu-Action Function
 int get_option(){
     int x;
     
@@ -38,10 +52,13 @@ int get_option(){
         std::cout << "You Input " << x << "!\n";
     }while(x <= 0 || x > 12);
     
-    
     return x;
 }
 
+
+
+
+//Sends the Program Flow to the function based on the input which is given from the user
 void menu_action (int input){
     if(input == 1){
         menu_new_game();
