@@ -143,6 +143,64 @@ player_data .cpp & .h (INCOMPLETE)
 
 
 
+321Test v0.1.5 25/6/14 4:10PM
+========================================
+
+FILE CHANGES
+_________________________________
+player_data .cpp & .h  (EDIT) : Added Loading From File
+
+
+
+CODE CHANGES
+_________________________________
+player_data .cpp & .h (INCOMPLETE)
+    - Loading Data Implemented
+        * Add a selection screen for loading saves
+    -Deleting Game Saves Implemented
+
+
+
+
+
+321Test v0.2.0 25/6/14 4:10PM
+========================================
+
+NOTES ON VERSION 0.2.0 CHANGES
+- Debugging Framework Developed
+- Restructure of Debug Menu
+- Saves Stored in Vector<string> Structure
+- Saves Also Stored Externally in player_data.txt
+- savefile.txt & global_data.txt redundant (ARCHIVED)
+- Ready to Work On Game Modules With Debugging Framework
+- Code Commenting Up to Date for Completion of this Minor Version
+
+
+FILE CHANGES
+_________________________________
+player_data .cpp & .h  (MAJOR REWORK) : Player Data Storage Changed
+menu_functions .cpp & .h  (REBUILT) : Menu Changed to Reflect New Options
+
+
+CODE CHANGES
+_________________________________
+player_data .cpp & .h
+    - Local Data Structure Implemented Using Vector<string> to store local game saves
+    - Saving & Loading Structure from File Implemented
+    - Previous player_data Implementation Optimized
+    - Able to Delete Files From Memory & close space
+    - Saving And Loading Files Easy From Debug Menu
+    - Code Commented & Tested
+
+
+menu_functions .cpp & .h
+    - Menu rebuild to reflect new debug options for saving & loading
+        * Will Be Reshuffled further for individual data adds such as
+            adding stamina to a player or direct modification of the profile
+    - Code Commented
+
+
+
 
 ################################################################################################################################################################
 
@@ -151,15 +209,15 @@ TO-DO LIST
 ================
 High Priority
 ================
-- Loading & Deleting Game States From savefile.txt
+- Game Building
+- AI & Logic Design
+
 
 ================
 Mid Priority
 ================
 - SQL/Database Support to replace text file saves
 - Extend Player Class
-- Modular Testing of Existing Code
-- More Code Commenting
 
 ================
 Low Priority

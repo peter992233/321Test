@@ -12,6 +12,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <vector>
+#include <sstream>
 using namespace std;
 
 
@@ -36,13 +38,21 @@ class player_data{
     string p_MB_result;
     
 public:
+    
+    //Old Implentations
     player_data();
-    void set_data(string);
-    void display_data();
-    void save_data();
-    void load_data();
-    int num_saves();
+  
+    
+    //New Implementations
     void set_MB(string);
+    void display_current_player_data();
+    void create_new_player();
+    void save_to_local();
+    void get_saves_from_file();
+    void display_all_local_saves();
+    void save_all_loaded_files();
+    void delete_from_local();
+    void load_from_local();
     
 };
 
