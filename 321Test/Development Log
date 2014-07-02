@@ -202,6 +202,28 @@ menu_functions .cpp & .h
 
 
 
+
+321Test v0.2.1 2/7/14 7:02PM
+========================================
+
+FILE CHANGES
+_________________________________
+Only Updates
+
+
+CODE CHANGES
+_________________________________
+menu_functions .cpp & .h
+    - Restructured menu only allows for exit by command
+    - Simpler Menu Design that was broken down into Sections
+    
+
+
+
+
+
+
+
 ################################################################################################################################################################
 
 TO-DO LIST

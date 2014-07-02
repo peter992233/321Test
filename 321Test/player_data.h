@@ -53,6 +53,8 @@ public:
     void save_all_loaded_files();
     void delete_from_local();
     void load_from_local();
+    long ret_id();
+    void edit_player_data();
     
 };
 

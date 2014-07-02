@@ -12,7 +12,6 @@
 
 
 
-
 //Currently Loaded Player Profile
 player_data current;
 
@@ -24,144 +23,333 @@ string MB_Global = "XXXX";
 
 
 //Function to Print the Menu
-void print_menu(){
-    std::cout << "=====DEBUG MENU=====\n";
-    std::cout << "1.) Create New Game \n";
-    std::cout << "2.) Save Game to Local \n";
-    std::cout << "3.) Display Current Player \n";
-    std::cout << "4.) Load Saves From File \n";
-    std::cout << "5.) Load Local Save Game \n";
-    std::cout << "6.) Display Local Save Games \n";
-    std::cout << "7.) Save Games To File \n";
-    std::cout << "8.) Print Menu Again \n";
-    std::cout << "9.) Personality Quiz \n";
-    std::cout << "10.) Return Global MB \n";
-    std::cout << "11.) Delete Save From Local \n";
-    std::cout << "12.) Exit \n";
+void print_main_menu(){
     
     
+    //New Menu As Of 2/7/14 for more compact display and modularisation of menu
+    
+    std::cout << "=====321 TEST MAIN MENU=====\n";
+    std::cout << "1.) Player Data Menu " << std::endl;
+    std::cout << "2.) Personality Quiz Menu " << std::endl;
+    std::cout << "3.) Status Display Menu " << std::endl;
+    std::cout << "4.) Scenario Menu " << std::endl;
+    std::cout << "5.) Minigame Menu " << std::endl;
+    std::cout << "6.) Exit Game " << std::endl;
 }
 
 
-//Function Waits for Input Before Returning an Input Marker to the Menu-Action Function
-int get_option(){
-    int x;
+void run_menu(){
+    
+    
+    //Selection Loop For the Main Menu
+    
+    int input = 0;
     
     do{
-        std::cin >> x;
-        std::cout << "You Input " << x << "!\n";
-    }while(x <= 0 || x > 12);
-    
-    return x;
-}
-
-
-
-
-//Sends the Program Flow to the function based on the input which is given from the user
-void menu_action (int input){
-    if(input == 1){
-        menu_new_game();
-    }else if (input == 2){
-        menu_save_game();
+        print_main_menu();
+        cout << "Menu Input: ";
+        cin >> input;
         
-    }else if (input == 3){
-        menu_display_current();
         
-    }else if (input == 4){
-        menu_load_file();
+        if(input == 1){
+            player_data_menu();
+        }
+        else if(input == 2){
+            player_quiz_menu();
+        }
+        else if(input == 3){
+            //Status Display Menu
+            stat_display_menu();
+        }
+        else if(input == 4){
+            //Scenario Menu
+             cout << "\n!!!!!Unimplemented!!!!!" << endl;
+        }
+        else if(input == 5){
+            //Minigame Menu
+             cout << "\n!!!!!Unimplemented!!!!!" << endl;
+        }
         
-    }else if (input == 5){
-        menu_load_local();
         
-    }else if (input == 6){
-        menu_display_local();
         
-    }else if (input == 7){
-        menu_save_to_file();
-        
-    }else if (input == 8){
-        menu_reprint();
-        
-    }
-    else if (input == 9){
-        MB_Global = start_quiz();
-        current.set_MB(MB_Global);
-        
-    }else if (input == 10){
-        cout << MB_Global << endl;
-        
-    }
-    else if (input == 11){
-        menu_delete_local_save();
-        
-    }
-    else if (input >= 12){
-        std::cout << "\n EXITING PROGRAM \n";
-        exit(1);
-    }
+    }while(input != 6);
     
     
 }
 
 
 
-void menu_new_game(){
+void player_data_menu(){
+    
+    /*A Secondary Loop That is instantiated by selecting option 1 from the main menu
+     This Gives Further Options for the users which relate to the Player Data
+     Aspects of the Program such as loading and saving players.
+     */
+    int input;
+    
+    do{
+        cout << "===== This is The Player Data Menu ===== " << endl;
+        cout << "1.) Create New Player " << endl;
+        cout << "2.) Save Current Player to Local" << endl;
+        cout << "3.) Load Player From Local " << endl;
+        cout << "4.) Save All to File " << endl;
+        cout << "5.) Load All From File" << endl;
+        cout << "6.) Delete From Local " << endl;
+        cout << "7.) Display Current Player " << endl;
+        cout << "8.) Display All Local Saves " << endl;
+        cout << "9.) Edit Current Player Data " << endl;
+        cout << "10.) Return To Main Menu " << endl;
+        cout << endl;
+        cout << "Menu Input: ";
+        cin >> input;
+        cout << endl;
+        
+        
+        
+        //The Redirection Options for each selection to their relevant functions
+        
+        
+        if(input == 1){
+            create_new_player();
+        }
+        else if(input == 2){
+            save_to_local();
+        }
+        else if(input == 3){
+            load_from_local();
+        }
+        else if(input == 4){
+            save_to_file();
+        }
+        else if(input == 5){
+            load_from_file();
+        }
+        else if(input == 6){
+            delete_local_player();
+        }
+        else if(input == 7){
+            display_current_player();
+        }
+        else if(input == 8){
+            display_all_local();
+        }
+        else if(input == 9){
+            edit_current_data();
+        }
+
+        
+        
+        
+        
+    }while(input != 10);
+    
+    cout << "Returning to Main Menu " << endl << endl;
+    
+};
+
+
+
+
+void player_quiz_menu(){
+    
+    /*A Secondary Loop That is instantiated by selecting option 2 from the main menu
+    This Gives Further Options for the users which relate to the personality quiz
+    Aspects of the Program.
+    */
+    
+    int input;
+    
+    do{
+        cout << "\n===== This is The Personality Quiz Menu ===== " << endl;
+        cout << "1.) Take Personality Quiz" << endl;
+        cout << "2.) Enter Your Own Quiz Result" << endl;
+        cout << "3.) See Recommended Courses " << endl;
+        cout << "4.) See Recommended Starting Stats " << endl;
+        cout << "5.) Return To Main Menu " << endl;
+        cout << endl;
+        cout << "Menu Input: ";
+        cin >> input;
+        cout << endl;
+        
+        
+        if(input == 1){
+            take_p_quiz();
+        }
+        else if(input == 2){
+            set_personality_profile();
+        }
+        else if(input == 3){
+            display_recomm_courses();
+        }
+        else if(input == 4){
+            display_recomm_stats();
+        }else{
+            cout << " An Incorrect input has occurred (Press 5 to return to main menu or try again)" << endl;
+        }
+
+        
+    }while(input != 5);
+    
+    cout << "Returning to Main Menu " << endl << endl;
+    
+};
+
+
+
+
+void stat_display_menu(){
+    
+    int input;
+    
+    do{
+        cout << "===== This is The Display Menu ===== " << endl;
+        cout << "1.) Current Player Data" << endl;
+        cout << "2.) Scenarios List" << endl;
+        cout << "3.) Minigames List " << endl;
+        cout << "4.) Highscores " << endl;
+        cout << "5.) List of Save Games " << endl;
+        cout << endl;
+        cout << "Menu Input: ";
+        cin >> input;
+        cout << endl;
+        
+        
+        
+        
+    }while(input != 5);
+    
+    cout << "Returning to Main Menu " << endl << endl;
+    
+};
+
+
+
+
+
+
+
+
+
+
+void create_new_player(){
     //New Game Option From Menu
-    //Sets the Current Player to a New One
+    //Player chooses to save the current 
     
-    //Maybe Add prompt to save? ***
     
-    current.create_new_player();
-    
+    if(current.ret_id() == -1){
+        cout << "Any Unsaved Changes to the Current Player will be Discarded " << endl;
+        cout << "Save Current Player (y/n): ";
+        char opt;
+        cin >> opt;
+        
+        if(opt == 'n' || opt == 'N'){
+            current.create_new_player();
+        }else if (opt == 'y' || opt == 'Y'){
+            current.save_to_local();
+            cout << "Player Has Been Saved " << endl;
+            current.create_new_player();
+            
+        }else{
+            cout << "Incorrect Input, Returning to Player Menu" << endl << endl;
+        }
+    }else{
+         current.create_new_player();
+    }
     
 }
 
-void menu_save_game(){
-    //Save Game to Local
-    //Saves the Current Game to the Local vector
-    
+
+
+void save_to_local(){
+    //Save the Player to the local storage
     current.save_to_local();
+    cout << "Player Has Been Saved " << endl;
+    
 }
 
-void menu_display_current(){
-    //Display CUrrent Player Option
-    //Displays the Loaded Players Data
+
+void load_from_local(){
+    //Load A Locally Saved Game into Current Player
+    current.load_from_local();
+    cout << "Player Has Been Loaded " << endl;
+}
+
+
+void save_to_file(){
+    //Update the file with the locally saved games
+    current.save_all_loaded_files();
     
+}
+
+void load_from_file(){
+    //Load the saves that are stored int he file
+    current.get_saves_from_file();
+    
+}
+
+
+void delete_local_player(){
+    //Delete a Save from the local storage
+    current.delete_from_local();
+    
+}
+
+
+void display_current_player(){
+    //Displays the Loaded Players Data
     current.display_current_player_data();
     
 }
 
-void menu_load_file(){
-    //Loads Saves From a File into the Local Vector
-    
-    current.get_saves_from_file();
-    
-    
-}
-void menu_load_local(){
-    //Load A Locally Saved Game into Current Player
-    current.load_from_local();
-    
-}
-void menu_display_local(){
-    //Display All Local Saves stored in the Vector
+void display_all_local(){
+    //Displays all the Locally saved Players Data
     current.display_all_local_saves();
-}
-void menu_save_to_file(){
-    //Save all the Files in the Vector to The File
-    current.save_all_loaded_files();
-}
-void menu_delete_local_save(){
-    //Delete a Local Save from the Vector
-    current.delete_from_local();
+    
 }
 
-void menu_reprint(){
-    //Save the Current Player to local
-    print_menu();
+void edit_current_data(){
+    //Edit the loaded players Data freely
+    cout << "To Be Implemented" << endl;
+    current.edit_player_data();
+    
+}
+
+void take_p_quiz(){
+    //Starts the Personality Quiz function
+    start_quiz();
 }
 
 
+void set_personality_profile(){
+    //Sets the Personality Profile to a custom one
+    
+    //Needs a check against valid profile codes but im too lazy atm
+    
+    
+    
+    cout << "Enter a Profile Code: " ;
+    string newprof;
+    cin.get();
+    getline(cin,newprof,'\n');
+    MB_Global = newprof;
+    
+    char opt;
+    cout << "Would you like to Set this to the Current Profile? (y/n) " << endl;
+    cin >> opt;
+    if(opt == 'y'){
+        current.set_MB(newprof);
+    }else if(opt == 'n'){
+        cout << "Current Profile Unchanged " << endl;
+    }
+    
+}
 
+void display_recomm_courses(){
+    
+}
+
+void display_recomm_stats(){
+
+    
+}
 

@@ -21,6 +21,16 @@ player_data::player_data(){
     
     //STUB
     
+    p_id = -1;
+    p_name = "BLANK";
+    p_degree = "BLANK";
+    p_int = 0;
+    p_sta = 0;
+    p_soc = 0;
+    p_energy = 0;
+    p_stress = 0;
+    p_academic = 0;
+    p_MB_result = "XXXX";
 }
 
 
@@ -343,5 +353,98 @@ void player_data::save_to_local(){
 }
 
 
+long player_data::ret_id(){
+    return p_id;
+}
 
+
+void player_data::edit_player_data(){
+    
+    player_data temp;
+    double check;
+    bool invalid = true;
+    
+    display_current_player_data();
+    temp.p_id = p_id;
+    cin.get();
+    cout << "Enter The New Name (OLD = " << p_name << ")";
+    getline(cin,temp.p_name,'\n');
+    cout << "Enter the New Course (OLD = " << p_degree << ")";
+    getline(cin,temp.p_degree,'\n');
+    cout << "Enter the New Stamina (OLD = " << p_sta << ")";
+    cin >> temp.p_sta;
+    cout << "Enter the New Social (OLD = " << p_soc << ")";
+    cin >> temp.p_soc;
+    cout << "Enter the New Intelligence (OLD = " << p_int << ")";
+    cin >> temp.p_int;
+    
+    
+    char reset;
+    cout << "Reset Meters? (y/n)" << endl;
+    cin >> reset;
+    if (reset == 'y'){
+        temp.p_energy = 100;
+        temp.p_academic = 100;
+        temp.p_stress = 0;
+    }else if (reset == 'n'){
+        cout << "Energy: " << p_energy  << endl;;
+        cout << "Academic: " << p_academic  << endl;;
+        cout << "Stress: " << p_stress << endl;
+        cout << "Keep Previous Levels? (y/n)";
+        cin >> reset;
+        if(reset == 'y'){
+            temp.p_energy = p_energy;
+            temp.p_academic = p_academic;
+            temp.p_stress = p_stress;
+        }
+        else if(reset =='n'){
+            while(invalid == true){
+                cout << "Enter Energy (0-100)";
+                cin >> check;
+                if(check >= 0 && check < 101){
+                    temp.p_energy = check;
+                    invalid = false;
+                }
+            
+            }
+            invalid = true;
+            while(invalid == true){
+                cout << "Enter Academic (0-100)";
+                cin >> check;
+                if(check >= 0 && check < 101){
+                    temp.p_academic = check;
+                    invalid = false;
+                }
+                
+            }
+            invalid = true;
+            while(invalid == true){
+                cout << "Enter Stress (0-100)";
+                cin >> check;
+                if(check >= 0 && check < 101){
+                    temp.p_stress = check;
+                    invalid = false;
+                }
+                
+            }
+            invalid = true;
+            
+        }else{
+            cout << "A Bad Input Has Occured, No Changes Were Made";
+            return;
+            
+        }
+        
+    }else{
+        cout << "A Bad Input Has Occured, No Changes Were Made";
+        return;
+    }
+    
+    
+    cout << "Enter the New Personality Type ";
+    cin >> temp.p_MB_result;
+    
+    *this = temp;
+    
+}
 
