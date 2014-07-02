@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D03DEC21196402FD0027F757 /* scenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D03DEC1F196402FD0027F757 /* scenarios.cpp */; };
 		D0450FFE194868CE003C6FE6 /* personalityquiz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */; };
 		D078CE54194AB7270076F8CB /* player_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D078CE52194AB7270076F8CB /* player_data.cpp */; };
 		D07B874219480F2F00A87BFB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07B874119480F2F00A87BFB /* main.cpp */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		D02DFC28194822500000125B /* Development Log */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Development Log"; sourceTree = "<group>"; };
+		D03DEC1F196402FD0027F757 /* scenarios.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = scenarios.cpp; sourceTree = "<group>"; };
+		D03DEC20196402FD0027F757 /* scenarios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scenarios.h; sourceTree = "<group>"; };
 		D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = personalityquiz.cpp; sourceTree = "<group>"; };
 		D0450FFF194868DD003C6FE6 /* personalityquiz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = personalityquiz.h; sourceTree = "<group>"; };
 		D0458F08195AD06100717050 /* player_data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = player_data.txt; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 				D078CE55194AB84B0076F8CB /* global_data.txt */,
 				D078CE56194AC96A0076F8CB /* savefile.txt */,
 				D0458F08195AD06100717050 /* player_data.txt */,
+				D03DEC1F196402FD0027F757 /* scenarios.cpp */,
+				D03DEC20196402FD0027F757 /* scenarios.h */,
 			);
 			path = 321Test;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 				D0450FFE194868CE003C6FE6 /* personalityquiz.cpp in Sources */,
 				D078CE54194AB7270076F8CB /* player_data.cpp in Sources */,
 				D07B874219480F2F00A87BFB /* main.cpp in Sources */,
+				D03DEC21196402FD0027F757 /* scenarios.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
