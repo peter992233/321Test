@@ -1,0 +1,44 @@
+Welcome to the University of Wollongong. This is your Orientation Week where we show you around campus
+and introduce you to the things you will need to know to complete your degree with us.
+First Lets show you to where you will be staying while studying at UOW.
+#
+This is Your Dorm, it is where you will be living for the duration of your stay with us.
+As you can see there is a [Bed] for sleeping, a [Desk] to study at, and plenty of space
+for you to [Workout] with, for now lets continue on with the tour by leaving the room
+by the [Door]
+#
+Here is the [Map] of the Campus, It shows all the faculty buildings and important places such as
+the [Unicentre] where you can meet new people and join clubs & societies also you can visit the
+[Unibar] which is a great place to relax and spend time. The Various Faculty offices are spread around
+campus which include [**list of faculties**]. How about we head to the faculty office for your Degree
+[building X]
+#
+This is [building X] where you will be attending the majority of your [lectures] and [tutorials] during the semester
+It also contains a [notice board] for all faculty related events that may be occurring. The [Office] for your faculty
+is over here, how about we sign you up for your first semester courses now.
+#
+The Subjects you are automatically enrolled in are the next core subjects you need to complete as part of your degree
+these subjects are
+[Subject 1]
+[Subject 2]
+[Subject 3]
+[Subject 4]
+Sometimes you will need to pick an elective subject which can be selected from a list of subjects which can be seen
+by visiting your faculty [office] when enrolling in subjects
+#
+Now You are Enrolled in your subjects lets introduce you to the other aspects of living at University
+Press [N] to skip forward in the explanations
+#
+Energy is a Primary resource used to perform tasks such as going to lectures or studying. 
+It is displayed as a Red bar on the bottom left of your screen. You always begin the day with full energy which is slowly depleted as you perform activities during the day.
+You can gain more energy by increasing your Stamina (STA) which will allow you to do more activities in a day.
+But be careful if you run out of energy you will Pass Out and not be able to do anything else for the day.
+#
+Academic Power is a Primary resource used to learn course content and complete assignments and laboratories. It is displayed as a Blue bar just below your energy meter.
+You can gain more Academic Power by increasing your Intelligence(INT) which will allow you to complete learning activities quicker.
+Once you run out of learning power in a day you must wait for it to recharge the next time you sleep.
+#
+Stress is an indicator of the Pressure you feel as a University Student and is increased by undertaking activities. It is displayed as a Yellow bar just below your energy meter.
+You can Reduce the rate of gaining Stress by increasing your Social(SOC) which will allow you to complete stress reducing and Stat Enhancing activities.
+Once you Max out on Stress in a day you all tasks you do will be much less effective.
+

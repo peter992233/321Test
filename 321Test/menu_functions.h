@@ -35,7 +35,7 @@ void take_p_quiz();
 void set_personality_profile();
 void display_recomm_courses();
 void display_recomm_stats();
-
+void scenario_run_menu();
 
 /*Menu Structure
 void print_menu();

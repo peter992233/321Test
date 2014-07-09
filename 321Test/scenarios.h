@@ -10,8 +10,10 @@
 #define ___21Test__scenarios__
 
 #include <iostream>
+#include <sstream>
 
 void init_new_game();
 void run_tutorial();
+void print_game_screen();
 
 #endif /* defined(___21Test__scenarios__) */

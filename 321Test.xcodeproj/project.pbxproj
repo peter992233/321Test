@@ -35,6 +35,7 @@
 		D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = personalityquiz.cpp; sourceTree = "<group>"; };
 		D0450FFF194868DD003C6FE6 /* personalityquiz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = personalityquiz.h; sourceTree = "<group>"; };
 		D0458F08195AD06100717050 /* player_data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = player_data.txt; sourceTree = "<group>"; };
+		D051D166196CCF9000E1C926 /* tutorial.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tutorial.txt; sourceTree = "<group>"; };
 		D078CE52194AB7270076F8CB /* player_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player_data.cpp; sourceTree = "<group>"; };
 		D078CE53194AB7270076F8CB /* player_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player_data.h; sourceTree = "<group>"; };
 		D078CE55194AB84B0076F8CB /* global_data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = global_data.txt; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 				D0458F08195AD06100717050 /* player_data.txt */,
 				D03DEC1F196402FD0027F757 /* scenarios.cpp */,
 				D03DEC20196402FD0027F757 /* scenarios.h */,
+				D051D166196CCF9000E1C926 /* tutorial.txt */,
 			);
 			path = 321Test;
 			sourceTree = "<group>";

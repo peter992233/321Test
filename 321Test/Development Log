@@ -221,6 +221,30 @@ menu_functions .cpp & .h
 
 
 
+321Test v0.2.2 9/7/14 12:40PM
+========================================
+Working on play testing the game design for the console version
+
+FILE CHANGES
+_________________________________
+tutorial.txt (CREATED) : Contains the text information required for the tutorial level
+menu_functions .cpp & .h  (EDIT) : Added Scenario Menu for Playtesting
+scenarios .cpp & .h (CREATED) : Scenarios for Playtesting and Game Design
+
+
+CODE CHANGES
+_________________________________
+scenarios .cpp & .h
+    - Added text tutorial
+    - Added Basic Game Screen
+        * May Be Edited to Reflect more information required by the user
+
+
+
+
+
+
+
 
 
 

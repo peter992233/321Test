@@ -9,7 +9,7 @@
 #include "menu_functions.h"
 #include "personalityquiz.h"
 #include "player_data.h"
-
+#include "scenarios.h"
 
 
 //Currently Loaded Player Profile
@@ -63,7 +63,7 @@ void run_menu(){
         }
         else if(input == 4){
             //Scenario Menu
-             cout << "\n!!!!!Unimplemented!!!!!" << endl;
+            scenario_run_menu();
         }
         else if(input == 5){
             //Minigame Menu
@@ -225,6 +225,42 @@ void stat_display_menu(){
 
 
 
+void scenario_run_menu(){
+    
+    int input;
+    
+    do{
+        cout << "===== This is The Scenario Menu ===== " << endl;
+        cout << "1.) Run Tutorial" << endl;
+        cout << "2.) Print Game Screen " << endl;
+        cout << "3.) Return To Main Menu " << endl;
+        cout << endl;
+        cout << "Menu Input: ";
+        cin >> input;
+        cout << endl;
+        
+        if(input == 1){
+            run_tutorial();
+        }
+        else if(input == 2){
+            print_game_screen();
+        }
+        else if(input == 3){
+
+        }
+        else if(input == 4){
+
+        }else{
+            cout << " An Incorrect input has occurred (Press 5 to return to main menu or try again)" << endl;
+        }
+
+        
+        
+    }while(input != 3);
+    
+    cout << "Returning to Main Menu " << endl << endl;
+    
+};
 
 
 
