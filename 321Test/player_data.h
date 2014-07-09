@@ -31,17 +31,26 @@ class player_data{
     //Initial Player Stats Chosen
     int p_int, p_sta, p_soc, p_money;
     
-    //Current Meter Levels
-    double p_energy, p_academic, p_stress;
     
     //Personality Profile Result
     string p_MB_result;
+    
     
 public:
     
     //Old Implentations
     player_data();
-  
+    
+    //Menu = 0, Map View = 1, Outside View = 2, inside view = 3, dorm view = 4, phone/PDA view = 5
+    int location;
+    
+    
+    //previous location - for returning form the menu
+    int prev;
+    
+    
+    //Current Meter Levels
+    double p_energy, p_academic, p_stress;
     
     //New Implementations
     void set_MB(string);

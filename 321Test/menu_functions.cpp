@@ -243,7 +243,7 @@ void scenario_run_menu(){
             run_tutorial();
         }
         else if(input == 2){
-            print_game_screen();
+            //print_game_screen(current);
         }
         else if(input == 3){
 

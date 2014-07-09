@@ -243,6 +243,35 @@ scenarios .cpp & .h
 
 
 
+321Test v0.3.0 9/7/14 5:41PM
+========================================
+INITIAL GAME CONTROL IMPLEMENTED
+
+
+FILE CHANGES
+_________________________________
+scenarios .cpp & .h (CREATED) : Creating initial game control structure
+player_data .cpp & .h  (EDIT) : Added Game Data
+
+CODE CHANGES
+_________________________________
+scenarios .cpp & .h
+    - Added Game Control Functions
+        * These Functions determine the current view and pass control
+            between eachother to determine game flow
+    - Created Initial View Transitions
+    - Views Defined into number form
+        * Menu = 0
+        * Map View = 1
+        * Outside View = 2
+        * Inside View = 3
+        * Dorm View = 4
+        * PDA View = 5
+
+player_data .cpp & .h
+    - Player Class Extended
+    - Added Location Data
+    - Added Previous Location Data (Unimplemented)
 
 
 
@@ -257,13 +286,14 @@ High Priority
 ================
 - Game Building
 - AI & Logic Design
-
+- Finish View Transition Functions
+- Add Previous Location Tracking
 
 ================
 Mid Priority
 ================
 - SQL/Database Support to replace text file saves
-- Extend Player Class
+- Further Extend Player Class
 
 ================
 Low Priority
