@@ -277,30 +277,25 @@ player_data .cpp & .h
 
 
 
-################################################################################################################################################################
 
-TO-DO LIST
+321Test v0.3.1 16/7/14 5:19PM
+========================================
 
-================
-High Priority
-================
-- Game Building
-- AI & Logic Design
-- Finish View Transition Functions
-- Add Previous Location Tracking
+FILE CHANGES
+_________________________________
+scenarios .cpp & .h (EDIT) : Game Flow Established
+player_data .cpp & .h  (IMPLEMENT) : Used the un-implemented Pervious location variable
 
-================
-Mid Priority
-================
-- SQL/Database Support to replace text file saves
-- Further Extend Player Class
+CODE CHANGES
+_________________________________
+scenarios .cpp & .h
+    - Game Control Established
+        * User Can Navigate freely Between Views
+    - Activity Function Stubs Created
+        * Commented Sections for required development
 
-================
-Low Priority
-================
-- Assign Degree Recommendations to Profile Result
-- Add And Change Questions in the Personality quiz to suit target audience
-- Add RNG Picker for Questions to select 3 for each letter
+player_data .cpp & .h
+    - Implemented Previous Location Data
 
 
 
@@ -308,7 +303,62 @@ Low Priority
 
 
 
+=====================================================
+=                     TASK LIST                     =
+=====================================================
 
+            +++++++++++++++++
+            + SCENARIOS.CPP +
+            +++++++++++++++++
+
+- Add The Following to these Functions
+
+    void gl_inside()
+        * Add Lecture Event Handling
+        * Add Tutorial Event Handling
+        * Add Office Event Handling
+        * Add Notice Board Display
+
+    void gl_outside()
+        * Add RNG
+        * Add Event/NPC function That will accept the RNG and return an event number (or 0 if no availabel events)
+        * Add Event Interaction Function
+
+
+    void gl_dorm()
+        * Add VideoGame Function (Reduce stress (maybe have stress edit function with input???)
+        * Add Study Function 
+        * Add Time Management + Sleep Function
+        * Add Exercise Function (Increase Stamina??)
+        
+        
+    void gl_pda()
+        * Add PDA Functions
+        * Add Subject Data retrieval functions
+        * Add Global Data to track player progress
+
+
+
+            +++++++++++++++++++
+            + PLAYER_DATA.CPP +
+            +++++++++++++++++++
+- Replace File Saving With More efficient method
+- Expand Saving to encompass expanded player data variables
+
+
+            +++++++++++++++++++++++
+            + PERSONALITYQUIZ.CPP +
+            +++++++++++++++++++++++
+- Add RNG To pick questions that will be asked
+- Assign Degree Recommendations Based on Results
+
+
+
+            ++++++++++++++++++++++
+            + QUIZ_QUESTIONS.TXT +
+            ++++++++++++++++++++++
+- Modify Questions for target Audience
+- Add More Questions's
 
 
 

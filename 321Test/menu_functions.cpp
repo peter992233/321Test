@@ -233,7 +233,8 @@ void scenario_run_menu(){
         cout << "===== This is The Scenario Menu ===== " << endl;
         cout << "1.) Run Tutorial" << endl;
         cout << "2.) Print Game Screen " << endl;
-        cout << "3.) Return To Main Menu " << endl;
+        cout << "3.) Run Game " << endl;
+        cout << "4.) Return To Main Menu " << endl;
         cout << endl;
         cout << "Menu Input: ";
         cin >> input;
@@ -246,7 +247,7 @@ void scenario_run_menu(){
             print_game_screen(current);
         }
         else if(input == 3){
-
+            gameloop(current);
         }
         else if(input == 4){
 
@@ -256,7 +257,7 @@ void scenario_run_menu(){
 
         
         
-    }while(input != 3);
+    }while(input != 4);
     
     cout << "Returning to Main Menu " << endl << endl;
     
