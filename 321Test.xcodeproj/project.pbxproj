@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D03DEC21196402FD0027F757 /* scenarios.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D03DEC1F196402FD0027F757 /* scenarios.cpp */; };
 		D0450FFE194868CE003C6FE6 /* personalityquiz.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */; };
+		D04C6DF8197B8F6F00385232 /* timeHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D04C6DF6197B8F6F00385232 /* timeHandler.cpp */; };
 		D078CE54194AB7270076F8CB /* player_data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D078CE52194AB7270076F8CB /* player_data.cpp */; };
 		D07B874219480F2F00A87BFB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D07B874119480F2F00A87BFB /* main.cpp */; };
 		D07B874419480F2F00A87BFB /* _21Test.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D07B874319480F2F00A87BFB /* _21Test.1 */; };
@@ -35,6 +36,8 @@
 		D0450FFD194868CE003C6FE6 /* personalityquiz.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = personalityquiz.cpp; sourceTree = "<group>"; };
 		D0450FFF194868DD003C6FE6 /* personalityquiz.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = personalityquiz.h; sourceTree = "<group>"; };
 		D0458F08195AD06100717050 /* player_data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = player_data.txt; sourceTree = "<group>"; };
+		D04C6DF6197B8F6F00385232 /* timeHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = timeHandler.cpp; sourceTree = "<group>"; };
+		D04C6DF7197B8F6F00385232 /* timeHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timeHandler.h; sourceTree = "<group>"; };
 		D051D166196CCF9000E1C926 /* tutorial.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = tutorial.txt; sourceTree = "<group>"; };
 		D078CE52194AB7270076F8CB /* player_data.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player_data.cpp; sourceTree = "<group>"; };
 		D078CE53194AB7270076F8CB /* player_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = player_data.h; sourceTree = "<group>"; };
@@ -94,6 +97,8 @@
 				D03DEC1F196402FD0027F757 /* scenarios.cpp */,
 				D03DEC20196402FD0027F757 /* scenarios.h */,
 				D051D166196CCF9000E1C926 /* tutorial.txt */,
+				D04C6DF6197B8F6F00385232 /* timeHandler.cpp */,
+				D04C6DF7197B8F6F00385232 /* timeHandler.h */,
 			);
 			path = 321Test;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				D078CE54194AB7270076F8CB /* player_data.cpp in Sources */,
 				D07B874219480F2F00A87BFB /* main.cpp in Sources */,
 				D03DEC21196402FD0027F757 /* scenarios.cpp in Sources */,
+				D04C6DF8197B8F6F00385232 /* timeHandler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

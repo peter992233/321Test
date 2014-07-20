@@ -14,7 +14,9 @@
 #include <fstream>
 #include <vector>
 #include <sstream>
+#include "timeHandler.h"
 using namespace std;
+
 
 
 class player_data{
@@ -36,10 +38,16 @@ class player_data{
     string p_MB_result;
     
     
+    
+    
 public:
     
     //Old Implentations
     player_data();
+    
+    
+    //Time Functions
+    timehandler TH;
     
     //Menu = 0, Map View = 1, Outside View = 2, inside view = 3, dorm view = 4, phone/PDA view = 5
     int location;

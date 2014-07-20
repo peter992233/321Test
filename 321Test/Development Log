@@ -300,7 +300,31 @@ player_data .cpp & .h
 
 
 
+321Test v0.3.2 20/7/14 5:30PM
+========================================
+TIME & LOCATION UPDATES
 
+
+FILE CHANGES
+_________________________________
+timeHandler .cpp & .h (EDIT) : Time Tracking Implementation
+player_data .cpp & .h  (IMPLEMENT) : Added time class to player_data
+
+
+CODE CHANGES
+_________________________________
+timeHandler .cpp & .h
+    - Created
+    - Initial Time Progression Functions
+    - Return Data Functions Created
+
+player_data .cpp & .h
+    - Added Time Class
+    - Change Display Function to Show Time & Date
+    - Changed the Save/Load functions to incorporate Time & Location Data
+
+player_data.txt
+    - Updated with Location and Time Data
 
 
 =====================================================
@@ -337,6 +361,20 @@ player_data .cpp & .h
         * Add Subject Data retrieval functions
         * Add Global Data to track player progress
 
+- Addtional Functions to Be Created
+    Time Interaction Functions
+        * Exam Week
+        * Study Week
+        * Mid Semester Break
+    
+    Subject & Subject Selection Function
+        * O-Week Selection Function
+        * List Of Subjects with CP cost & timetable
+        * Timetable Manager & Display
+    
+    Update function to track
+        * Available lecture/tutorials
+
 
 
             +++++++++++++++++++
@@ -344,6 +382,8 @@ player_data .cpp & .h
             +++++++++++++++++++
 - Replace File Saving With More efficient method
 - Expand Saving to encompass expanded player data variables
+- Update File Saving to incorporate new data such as Time and Location
+- Update Display To Translate Time Data into String e.g. (11.5,1 to 11:30, Monday etc)
 
 
             +++++++++++++++++++++++

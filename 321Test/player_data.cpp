@@ -31,6 +31,7 @@ player_data::player_data(){
     p_stress = 0;
     p_academic = 0;
     p_MB_result = "XXXX";
+    
 }
 
 
@@ -50,10 +51,12 @@ void player_data::display_current_player_data(){
     cout << "Stats\n INT: " << p_int << "\n STA: " << p_sta << "\n SOC: " <<p_soc << endl;
     cout << "Meters\n Energy: " << p_energy << "\n Stress: " ;
     cout << p_stress << "\n Academic: " <<p_academic << endl;
-    cout << "MB Result: " << p_MB_result << endl << endl;
+    cout << "Location: " << location << endl;
+    cout << "MB Result: " << p_MB_result << endl;
+    cout << "Time: " << TH.hour  << "  Day: " << TH.day << endl;
+    cout << "Week: " << TH.week << endl;
+    cout << "Semester" << TH.semester << endl << endl;
 
-    
-    
 }
 
 
@@ -274,6 +277,16 @@ void player_data::load_from_local(){
             ss >> p_stress;
             ss.get();
             getline(ss,p_MB_result,';');
+            ss >> TH.hour;
+            ss.get();
+            ss >> TH.day;
+            ss.get();
+            ss >> TH.week;
+            ss.get();
+            ss >> TH.semester;
+            ss.get();
+            ss >> location;
+            ss.get();
             
             
             cout << "Save File " << toload  << " Loaded " << endl;
@@ -320,14 +333,14 @@ void player_data::save_to_local(){
                         //If you do not wish to override and want to create a new save game from the data
                          //compiles the string and pushed it back while changing the p_id
                         stringstream outstring(compiledsave);
-                        outstring << (playerlist.size()+1) << ";" << p_name << ";" << p_degree << ";" << p_int << ";" << p_sta << ";"<< p_soc << ";"<< p_energy << ";"<< p_academic << ";"<< p_stress << ";"<< p_MB_result << ";";
+                        outstring << (playerlist.size()+1) << ";" << p_name << ";" << p_degree << ";" << p_int << ";" << p_sta << ";"<< p_soc << ";"<< p_energy << ";"<< p_academic << ";"<< p_stress << ";"<< p_MB_result << ";" << TH.hour << ";" << TH.day << ";" << TH.week << ";" << TH.semester << ";" << location;
                         playerlist.push_back(outstring.str());
                         return;
                     }else if(overwrite == 'y'){
                         //If you do want to override and replace the save game from the current data
                         //compiles the string and writes over the existing string
                         stringstream outstring(compiledsave);
-                        outstring << p_id << ";" << p_name << ";" << p_degree << ";" << p_int << ";" << p_sta << ";"<< p_soc << ";"<< p_energy << ";"<< p_academic << ";"<< p_stress << ";"<< p_MB_result << ";";
+                        outstring << (playerlist.size()+1) << ";" << p_name << ";" << p_degree << ";" << p_int << ";" << p_sta << ";"<< p_soc << ";"<< p_energy << ";"<< p_academic << ";"<< p_stress << ";"<< p_MB_result << ";" << TH.hour << ";" << TH.day << ";" << TH.week << ";" << TH.semester << ";" << location;
                         playerlist[p_id] = outstring.str();
                         return;
                         
@@ -345,7 +358,7 @@ void player_data::save_to_local(){
         //If no return condition is hit we can assume there is no existing conflict and the save state can simply be added to the back of the list
         //without conflicting with any existing saves
         stringstream outstring(compiledsave);
-        outstring << p_id << ";" << p_name << ";" << p_degree << ";" << p_int << ";" << p_sta << ";"<< p_soc << ";"<< p_energy << ";"<< p_stress << ";"<< p_academic << ";"<< p_MB_result << ";";
+        outstring << (playerlist.size()+1) << ";" << p_name << ";" << p_degree << ";" << p_int << ";" << p_sta << ";"<< p_soc << ";"<< p_energy << ";"<< p_academic << ";"<< p_stress << ";"<< p_MB_result << ";" << TH.hour << ";" << TH.day << ";" << TH.week << ";" << TH.semester << ";" << location;
         playerlist.push_back(outstring.str());
 
     

@@ -15,17 +15,20 @@
 
 void init_new_game(player_data &loaded){
 
-
-    char opt;
-    cout << "Would You like to run the tutorial? " << endl;
-    cin >> opt;
+        char opt;
+        cout << "Would You like to run the tutorial? " << endl;
+        cin >> opt;
+        
+        if(opt == 'y'){
+            run_tutorial();
+            loaded.TH.newgame();
+        }
+        if(opt == 'n'){
+            loaded.TH.newgame();
+        }
     
-    if(opt == 'y'){
-        run_tutorial();
-    }
-    if(opt == 'n'){
-        gameloop(loaded);
-    }
+    cout << "Beginning Game " << endl;
+    gameloop(loaded);
 }
 
 
@@ -62,7 +65,6 @@ void run_tutorial(){
     
     cout << endl << "Run Successful" << endl;
     
-
 }
 
 
@@ -70,6 +72,8 @@ void print_game_screen(player_data &loaded){
 
     
     cout << "----------------------------------------------------------------------------------------\n";
+    cout << "Time: " << loaded.TH.retTime() << endl;
+    cout << "Day: " << loaded.TH.retDay() << endl;
     cout << "Location: " << loaded.location << endl;
     cout << "Energy: " << loaded.p_energy << endl;
     cout << "Stress: " << loaded.p_stress  << endl;
@@ -87,6 +91,11 @@ void print_game_screen(player_data &loaded){
 //Dictates Where the game is at and which function is relevant for option choices
 //such as changing locations
 void gameloop(player_data &loaded){
+    
+    
+    if(loaded.TH.week == 0){
+        init_new_game(loaded);
+    }
     
     bool endgame = false;
     while(endgame != true){
