@@ -278,12 +278,31 @@ void gl_dorm(player_data &loaded){
         loaded.location = 1;
     }else if(option == 3){
         //Play Videogame
+        cout << " You Played A VideoGame " << endl;
+        loaded.TH.addtime(1.00);
     }else if(option == 4){
         //Study
+        cout << " You Studied For an Hour " << endl;
+        loaded.TH.addtime(1.00);
     }else if(option == 5){
         //Sleep
+        double howmuchsleep;
+        howmuchsleep = loaded.TH.sleep();
+        if(howmuchsleep < 6){
+            loaded.p_energy += 50;
+        }else if(howmuchsleep > 6){
+            loaded.p_energy += 100;
+        }
+        if(loaded.p_energy > 100){
+            loaded.p_energy = 100;
+        }
+        
+        
     }else if(option == 6){
         //Go For Run
+        if(loaded.p_energy < 2){
+            cout << "You Do Not Have enough Energy To Go For A Run " << endl;
+        }
     }else if(option == 7){
         loaded.location = 5;
     }else{

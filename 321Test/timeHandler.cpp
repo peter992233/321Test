@@ -61,3 +61,22 @@ void timehandler::addtime(double moretime){
     }
     
 }
+
+
+double timehandler::sleep(){
+    
+    double howmuchsleep = 0;
+    
+    std::cout << "How Long Do You Want To Sleep ? " << std::endl;
+    std::cin >> howmuchsleep;
+    
+    addtime(howmuchsleep);
+    std::cout << "You Slept Until " << hour << std::endl;
+    
+    if(howmuchsleep < 6){
+        std::cout << "You Had a Short Sleep" << std::endl;
+    }else{
+        std::cout << "You Had a Long Sleep" << std::endl;
+    }
+    return howmuchsleep;
+}

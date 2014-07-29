@@ -26,7 +26,7 @@ public:
     double retTime();
     void addtime(double);
     timehandler();
-    
+    double sleep();
     
 };
 
